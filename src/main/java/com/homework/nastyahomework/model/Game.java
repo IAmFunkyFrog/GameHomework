@@ -24,7 +24,7 @@ public class Game {
             }
         }
         if(word == null) {
-            Map.Entry<String, ArrayList<String>> randomWords = (Map.Entry<String, ArrayList<String>>) getRandomObjectFromArray(words.entrySet().stream().toList());
+            Map.Entry<String, ArrayList<String>> randomWords = (Map.Entry<String, ArrayList<String>>) getRandomObjectFromArray(Arrays.asList(words.entrySet().toArray()));
             word = (String) getRandomObjectFromArray(randomWords.getValue());
         }
         this.word = word.toUpperCase();
